@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "testGetCachedInteger",
+      "setup": "",
+      "run": "mvn test -Dtest=edu.cuny.hunter.clients.tests.IntegerObserverTest#testGetCachedInteger test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "testUpdate",
+      "setup": "",
+      "run": "mvn test -Dtest=edu.cuny.hunter.clients.tests.IntegerObserverTest#testUpdate test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "testGetInteger",
+      "setup": "",
+      "run": "mvn test -Dtest=edu.cuny.hunter.clients.tests.IntegerContainerTest#testGetInteger test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "testSetInteger",
+      "setup": "",
+      "run": "mvn test -Dtest=edu.cuny.hunter.clients.tests.IntegerContainerTest#testSetInteger test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "testAttach",
+      "setup": "",
+      "run": "mvn test -Dtest=edu.cuny.hunter.clients.tests.IntegerContainerTest#testAttach test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "testDetach",
+      "setup": "",
+      "run": "mvn test -Dtest=edu.cuny.hunter.clients.tests.IntegerContainerTest#testDetach test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    }
+  ]
+}

@@ -1,5 +1,10 @@
 package edu.cuny.hunter.observerpattern;
 
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Objects;
+
+
 /**
  * An abstract representation of a subject of interest.
  * 
@@ -8,6 +13,11 @@ package edu.cuny.hunter.observerpattern;
 @SuppressWarnings("rawtypes")
 public abstract class Subject {
 
+        /**
+	 * A collection of {@link Observer}s that are interested in this subject.
+	 */
+	private Collection<Observer> observerCollection = new HashSet<>();
+
 	/**
 	 * Attaches the given {@link Observer} to this subject. The observer will be
 	 * notified of state changes.
@@ -15,7 +25,7 @@ public abstract class Subject {
 	 * @param o The observer to attach.
 	 */
 	public void attach(Observer o) {
-		// TODO
+                this.observerCollection.add(o);
 	}
 
 	/**
@@ -25,7 +35,7 @@ public abstract class Subject {
 	 * @param o The observer to detach.
 	 */
 	public void detach(Observer o) {
-		// TODO
+                this.observerCollection.remove(o);
 	}
 
 	/**
@@ -34,6 +44,6 @@ public abstract class Subject {
 	 */
 	@SuppressWarnings("unchecked")
 	protected void notifyObservers() {
-		// TODO
+                this.observerCollection.stream().filter(Objects::nonNull).forEach(o -> o.update(this));
 	}
 }

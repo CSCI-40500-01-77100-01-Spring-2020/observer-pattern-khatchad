@@ -20,7 +20,7 @@ public class IntegerContainer extends Subject {
 	 * @param integer The internal integer value.
 	 */
 	public IntegerContainer(int integer) {
-                this.integer = integer;
+		this.integer = integer;
 	}
 
 	/**
@@ -40,7 +40,7 @@ public class IntegerContainer extends Subject {
 	 * @param integer The integer for which to set the internal integer.
 	 */
 	public void setInteger(int integer) {
-                // if we have a new value.
+		// if we have a new value.
 		if (this.integer != integer) {
 			// update the value
 			this.integer = integer;

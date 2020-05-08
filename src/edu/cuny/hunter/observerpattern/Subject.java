@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Objects;
 
-
 /**
  * An abstract representation of a subject of interest.
  * 
@@ -12,8 +11,8 @@ import java.util.Objects;
  */
 @SuppressWarnings("rawtypes")
 public abstract class Subject {
-
-        /**
+	
+	/**
 	 * A collection of {@link Observer}s that are interested in this subject.
 	 */
 	private Collection<Observer> observerCollection = new HashSet<>();
@@ -25,7 +24,7 @@ public abstract class Subject {
 	 * @param o The observer to attach.
 	 */
 	public void attach(Observer o) {
-                this.observerCollection.add(o);
+		this.observerCollection.add(o);
 	}
 
 	/**
@@ -35,7 +34,7 @@ public abstract class Subject {
 	 * @param o The observer to detach.
 	 */
 	public void detach(Observer o) {
-                this.observerCollection.remove(o);
+		this.observerCollection.remove(o);
 	}
 
 	/**
@@ -44,6 +43,7 @@ public abstract class Subject {
 	 */
 	@SuppressWarnings("unchecked")
 	protected void notifyObservers() {
-                this.observerCollection.stream().filter(Objects::nonNull).forEach(o -> o.update(this));
+		// call update() on every non-null observer.
+		this.observerCollection.stream().filter(Objects::nonNull).forEach(o -> o.update(this));
 	}
 }

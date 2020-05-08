@@ -8,6 +8,11 @@ import edu.cuny.hunter.observerpattern.Subject;
  * @author <a href="mailto:your.name@hunter.cuny.edu">YOUR NAME</a>
  */
 public class IntegerContainer extends Subject {
+	
+	/**
+	 * The internal integer.
+	 */
+	private int integer;
 
 	/**
 	 * Creates an {@link IntegerContainer} with the given integer value.
@@ -15,7 +20,7 @@ public class IntegerContainer extends Subject {
 	 * @param integer The internal integer value.
 	 */
 	public IntegerContainer(int integer) {
-		// TODO
+		this.integer = integer;
 	}
 
 	/**
@@ -24,8 +29,7 @@ public class IntegerContainer extends Subject {
 	 * @return The internal integer value.
 	 */
 	public int getInteger() {
-		// TODO
-		return 0;
+		return this.integer;
 	}
 
 	/**
@@ -36,6 +40,13 @@ public class IntegerContainer extends Subject {
 	 * @param integer The integer for which to set the internal integer.
 	 */
 	public void setInteger(int integer) {
-		// TODO
+		// if we have a new value.
+		if (this.integer != integer) {
+			// update the value
+			this.integer = integer;
+
+			// tell all the observers that the state has changed.
+			this.notifyObservers();
+		}
 	}
 }

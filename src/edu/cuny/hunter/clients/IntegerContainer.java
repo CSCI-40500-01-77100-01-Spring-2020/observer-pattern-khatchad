@@ -8,8 +8,8 @@ import edu.cuny.hunter.observerpattern.Subject;
  * @author <a href="mailto:your.name@hunter.cuny.edu">YOUR NAME</a>
  */
 public class IntegerContainer extends Subject {
-
-        /**
+	
+	/**
 	 * The internal integer.
 	 */
 	private int integer;

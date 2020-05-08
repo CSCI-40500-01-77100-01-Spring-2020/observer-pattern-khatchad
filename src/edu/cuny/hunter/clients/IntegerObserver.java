@@ -11,7 +11,7 @@ import edu.cuny.hunter.observerpattern.Subject;
  */
 public class IntegerObserver implements Observer<IntegerContainer> {
 
-        /**
+	/**
 	 * This {@link Observer}s cached interger value of the
 	 * {@link IntegerContainer} it is observing.
 	 */
@@ -23,7 +23,7 @@ public class IntegerObserver implements Observer<IntegerContainer> {
 	 */
 	@Override
 	public void update(IntegerContainer subject) {
-                this.cachedInteger = subject.getInteger();
+		this.cachedInteger = subject.getInteger();
 	}
 
 	/**
@@ -32,6 +32,6 @@ public class IntegerObserver implements Observer<IntegerContainer> {
 	 * @return The cached integer value.
 	 */
 	public int getCachedInteger() {
-                return cachedInteger;
+		return cachedInteger;
 	}
 }
